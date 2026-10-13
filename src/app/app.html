@@ -1,14 +1,17 @@
 <h1>To-Do-List</h1>
 
-<input type="text" [(ngModel)]="task" placeholder="Enter new task">
-<button type="button" (click)="addTask()">Add</button>
+<div class="inp">
+  <input type="text" [(ngModel)]="task" placeholder="Enter new task">
+  <button type="button" (click)="addTask()">Add</button>
+</div>
 
-<!-- <h2>{{task}}</h2> -->
 
 <div>
-  @for(t of taskList;track $index ){
   <ul>
-    <li>{{t.id}} - {{t.task}}</li>
+  @for(t of taskList;track t.id;let i=$index ){
+  
+    <li>{{i+1}}. {{t.task}} <button type="button" (click)="deleteTask(t.id)">Delete</button></li>
+  
+  }
   </ul>
-}
 </div>

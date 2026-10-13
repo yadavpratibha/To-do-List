@@ -18,4 +18,10 @@ export class App {
     this.taskList.push({id:this.taskList.length+1,task:this.task});
     this.task="";
   }
+
+  deleteTask(idx:number){
+    this.taskList=this.taskList.filter((item)=>item.id!=idx);
+    
+    
+  }
 }

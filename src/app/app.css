@@ -1,0 +1,96 @@
+/* Main heading */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+/* Input container */
+.inp {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+/* Text input */
+.inp input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.inp input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* General button styling */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+/* Add button */
+.inp button {
+  background-color: #007bff;
+  color: white;
+}
+
+.inp button:hover {
+  background-color: #0056b3;
+}
+
+/* Task list container */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Individual task */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Delete button */
+li button {
+  background-color: #dc3545;
+  color: white;
+  flex-shrink: 0;
+}
+
+li button:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .inp,
+  ul {
+    width: 90%;
+  }
+
+  .inp input {
+    min-width: 0;
+  }
+}
